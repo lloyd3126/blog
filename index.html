@@ -324,7 +324,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-04-10 17:41:09" itemprop="dateModified" datetime="2022-04-10T17:41:09+08:00">2022-04-10</time>
+      <time title="修改時間：2022-04-10 20:17:04" itemprop="dateModified" datetime="2022-04-10T20:17:04+08:00">2022-04-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -372,15 +372,17 @@
 
 
 <h1 id="取得請求的各種方法"><a href="#取得請求的各種方法" class="headerlink" title="取得請求的各種方法"></a>取得請求的各種方法</h1><ul>
-<li>官方文件：<a target="_blank" rel="noopener" href="https://laravel.com/docs/5.7/requests">連結</a><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$request // 使用者的請求物件</span><br><span class="line">$request-&gt;all() // 取得所有輸入資料</span><br><span class="line">$request-&gt;path() // 取得請求的 URI</span><br><span class="line">$request-&gt;query() // 取得請求的查詢參數</span><br></pre></td></tr></table></figure>
-取得特定輸入值</li>
+<li>官方文件：<a target="_blank" rel="noopener" href="https://laravel.com/docs/5.7/requests">連結</a></li>
 </ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$request</span> <span class="comment">// 使用者的請求物件</span></span><br><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">all</span>() <span class="comment">// 取得所有輸入資料</span></span><br><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">path</span>() <span class="comment">// 取得請求的 URI</span></span><br><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">query</span>() <span class="comment">// 取得請求的查詢參數</span></span><br></pre></td></tr></table></figure>
+<p>取得特定輸入值</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">input</span>(<span class="string">&#x27;name&#x27;</span>) <span class="comment">// 王小明</span></span><br></pre></td></tr></table></figure>
 
 <p>取不到會返回 null</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">input</span>(<span class="string">&#x27;age&#x27;</span>) <span class="comment">// null</span></span><br></pre></td></tr></table></figure>
+
 <p>為要取得的特定輸入值設定預設值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$request-&gt;input(&#x27;age&#x27;, 24) // 24</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$request</span>-&gt;<span class="title function_ invoke__">input</span>(<span class="string">&#x27;age&#x27;</span>, <span class="number">24</span>) <span class="comment">// 24</span></span><br></pre></td></tr></table></figure>
 
 
 
