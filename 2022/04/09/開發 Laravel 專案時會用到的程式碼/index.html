@@ -6,24 +6,24 @@
 <meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lloyd3126.github.io","root":"/blog/","images":"/blog/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":"mac","bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/blog/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"blog.nien.cc","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":"mac","bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="新增一般路由 官方文件：連結 檔案路徑：.&#x2F;routes&#x2F;web.php  12345678910Route::get(&amp;#x27;&#x2F;&amp;#x27;, function () &amp;#123;    return view(&amp;#x27;welcome&amp;#x27;);&amp;#125;);Route::get(&amp;#x27;user&#x2F;&amp;#123;id&amp;#125;&amp;#x27;, &amp;#x27;Us">
 <meta property="og:type" content="article">
 <meta property="og:title" content="開發 Laravel 專案時會用到的程式碼">
-<meta property="og:url" content="https://lloyd3126.github.io/blog/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/index.html">
+<meta property="og:url" content="https://blog.nien.cc/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/index.html">
 <meta property="og:site_name" content="Nien&#39;s Blog">
 <meta property="og:description" content="新增一般路由 官方文件：連結 檔案路徑：.&#x2F;routes&#x2F;web.php  12345678910Route::get(&amp;#x27;&#x2F;&amp;#x27;, function () &amp;#123;    return view(&amp;#x27;welcome&amp;#x27;);&amp;#125;);Route::get(&amp;#x27;user&#x2F;&amp;#123;id&amp;#125;&amp;#x27;, &amp;#x27;Us">
 <meta property="og:locale" content="zh_TW">
@@ -36,11 +36,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://lloyd3126.github.io/blog/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/">
+<link rel="canonical" href="https://blog.nien.cc/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://lloyd3126.github.io/blog/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/","path":"2022/04/09/開發 Laravel 專案時會用到的程式碼/","title":"開發 Laravel 專案時會用到的程式碼"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://blog.nien.cc/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/","path":"2022/04/09/開發 Laravel 專案時會用到的程式碼/","title":"開發 Laravel 專案時會用到的程式碼"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>開發 Laravel 專案時會用到的程式碼 | Nien's Blog</title>
@@ -51,7 +51,7 @@
 
 
   <noscript>
-    <link rel="stylesheet" href="/blog/css/noscript.css">
+    <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
 </head>
 
@@ -71,7 +71,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
       <p class="site-title">Nien's Blog</p>
       <i class="logo-line"></i>
@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li>
   </ul>
 </nav>
 
@@ -131,18 +131,18 @@
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        <a href="/blog/archives/">
+        <a href="/archives/">
           <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-          <a href="/blog/categories/">
+          <a href="/categories/">
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-          <a href="/blog/tags/">
+          <a href="/tags/">
         <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
@@ -161,15 +161,15 @@
     
     
     <li>
-        <a href="/blog/" title="" target="_blank"></a>
+        <a href="/" title="" target="_blank"></a>
     </li>
     
     <li>
-        <a href="/blog/" title="" target="_blank"></a>
+        <a href="/" title="" target="_blank"></a>
     </li>
     
     <li>
-        <a href="/blog/" title="" target="_blank"></a>
+        <a href="/" title="" target="_blank"></a>
     </li>
     
 </ul>
@@ -207,10 +207,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://lloyd3126.github.io/blog/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/">
+    <link itemprop="mainEntityOfPage" href="https://blog.nien.cc/2022/04/09/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Chen Chung Nien">
     </span>
 
@@ -251,7 +251,7 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/blog/categories/%E7%A8%8B%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">程式</span></a>
+          <a href="/categories/%E7%A8%8B%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">程式</span></a>
         </span>
     </span>
 
@@ -352,21 +352,21 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/php/" rel="tag"># php</a>
-              <a href="/blog/tags/Laravel/" rel="tag"># Laravel</a>
-              <a href="/blog/tags/%E7%B5%82%E7%AB%AF%E6%A9%9F/" rel="tag"># 終端機</a>
+              <a href="/tags/php/" rel="tag"># php</a>
+              <a href="/tags/Laravel/" rel="tag"># Laravel</a>
+              <a href="/tags/%E7%B5%82%E7%AB%AF%E6%A9%9F/" rel="tag"># 終端機</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/blog/2022/04/08/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/" rel="prev" title="開發 Laravel 專案時會用到的終端機指令">
+                <a href="/2022/04/08/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%B5%82%E7%AB%AF%E6%A9%9F%E6%8C%87%E4%BB%A4/" rel="prev" title="開發 Laravel 專案時會用到的終端機指令">
                   <i class="fa fa-chevron-left"></i> 開發 Laravel 專案時會用到的終端機指令
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/blog/2022/04/10/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC%E6%AF%94%E8%BC%83/" rel="next" title="開發 Laravel 專案時會用到的程式碼比較">
+                <a href="/2022/04/10/%E9%96%8B%E7%99%BC%20Laravel%20%E5%B0%88%E6%A1%88%E6%99%82%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84%E7%A8%8B%E5%BC%8F%E7%A2%BC%E6%AF%94%E8%BC%83/" rel="next" title="開發 Laravel 專案時會用到的程式碼比較">
                   開發 Laravel 專案時會用到的程式碼比較 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -401,7 +401,7 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/blog/js/comments.js"></script><script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script><script src="/blog/js/next-boot.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
 
